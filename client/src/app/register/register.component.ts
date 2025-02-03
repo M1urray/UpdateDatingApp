@@ -12,9 +12,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class RegisterComponent {
   private accountService = inject(AccountsService);
-    private toastr = inject(ToastrService);
-  
-   cancelRegister = output<boolean> ();
+  private toastr = inject(ToastrService);
+
+  cancelRegister = output<boolean>();
 
   model: any = {}
 
