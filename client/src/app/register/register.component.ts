@@ -1,7 +1,7 @@
 import { Component, EventEmitter, inject, input, output, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AccountsService } from '../_services/accounts.service';
 import { ToastrService } from 'ngx-toastr';
+import { AccountService } from '../_services/account.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  private accountService = inject(AccountsService);
+  private accountService = inject(AccountService);
   private toastr = inject(ToastrService);
 
   cancelRegister = output<boolean>();
